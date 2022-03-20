@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="sass/styles4.css" rel="stylesheet">
+    <title>Calculatrice</title>
+</head>
+<body>
+    <h1>Métrificateur de cuisine</h1>
+    <h2>Volume</h2>
+    <p>Rendez lisibles et modernes vos vieilles recettes américaines! Transformez les unités de mesure archaïques en trois clics. Adieu, tasses et cuillères de toutes sortes. Rayez-les de votre vocabulaire et de vos bouquins de cuisine. #parlezmétrique!</p>
+    <div id="calc">
+        <div id="ecran">
+            <div id="memoire2"></div>
+            <div id="uniteChoisie"></div>
+            <div id="resultat"></div>
+        </div>
+        <div id="legende">
+            <button onclick="retourDe()" disabled>de</button>
+            <button onclick="retourUnite()" disabled>combien</button>
+            <button disabled>en</button>
+        </div>
+        <div id="pave">
+            <div id="paveGauche">
+                <button onclick="entree(5, 'cuillère à thé / café', 'cuillères à thé / café')">c. à thé</button>
+                <button onclick="entree(15, 'cuillère à table / soupe', 'cuillères à table / soupe')">c. à soupe</button>
+                <button onclick="entree(30, 'once liquide', 'onces liquides')">oz liq.</button>
+                <button onclick="entree(250, 'tasse', 'tasses')">tasses</button>
+            </div>
+            <div id="paveNum">
+                <button value="7" onclick="num(7)" disabled>7</button>
+                <button value="8" onclick="num(8)" disabled>8</button>
+                <button value="9" onclick="num(9)" disabled>9</button>
+                <button value="4" onclick="num(4)" disabled>4</button>
+                <button value="5" onclick="num(5)" disabled>5</button>
+                <button value="6" onclick="num(6)" disabled>6</button>
+                <button value="1" onclick="num(1)" disabled>1</button>
+                <button value="2" onclick="num(2)" disabled>2</button>
+                <button value="3" onclick="num(3)" disabled>3</button>
+                <button value="0" onclick="numZero()" disabled>0</button>
+                <button id="virgule" onclick="numDec()" disabled>,</button>
+                <button onclick="numC()" disabled>C</button>
+            </div>
+            <div id="paveDroite">
+                <button onclick="sortieML()" disabled>mL</button>
+                <button onclick="sortieL()" disabled>L</button>
+            </div>
+        </div>
+        <div id="instructions">La quantité que vous souhaitez de convertir est en quelle unité?</div>
+    </div>
+    <div id="memoire"></div>
+    <p>Limitations :</p>
+    <ul>
+        <li>Ce convertisseur affiche la virgule avec un point, contrairement aux normes de la langue française.</li>
+        <li>Aucune distinction n'est fait entre le singulier et le pluriel, par exemple, on peut lire : 1 tasses.</li>
+    </ul>
+    <script src="script4.js"></script>
+    <script src="jquery.js"></script>
+</body>
+</html>

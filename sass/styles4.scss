@@ -1,0 +1,112 @@
+body {
+	background-color: #3d0929;
+	color: #efefef;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+	margin: 0 5px;
+	text-align: center;
+}
+
+#calc {
+	border: 3px solid rgb(149, 131, 167);
+	border-radius: 5px;
+	margin: 15px auto;
+	width: MIN(90%, 400px);
+	#ecran {
+		background-color: black;
+		display: flex;
+		height: 45px;
+		padding: 10px;
+		#uniteChoisie,
+		#memoire2 {
+			font-size: 15px;
+			padding: 5px;
+		}
+		#resultat {
+			flex-grow: 1;
+			font-size: 30px;
+			padding: 5px;
+			text-align: right;
+		}
+	}
+	#legende {
+		display: flex;
+		button {
+			background-color: #291717;
+			color: #efefef;
+			cursor: pointer;
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			width: 20%;
+			&:nth-child(2) {
+				width: 60%;
+			}
+			&:disabled {
+				cursor: default;
+				opacity: 0.5;
+			}
+		}
+	}
+	#pave {
+		display: flex;
+		> div {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			button {
+				background-color: #5f1c1c;
+				border-style: solid;
+				border-width: 1px;
+				color: #efefef;
+				cursor: pointer;
+				height: 55px;
+				padding: 0;
+				&:hover {
+					background-color: #853131;
+				}
+				&:disabled {
+					cursor: default;
+					opacity: 0.6;
+					&:hover {
+						background-color: #5f1c1c;
+					}
+				}
+			}
+		}
+		#paveGauche {
+			flex-direction: column;
+			width: 20%;
+			button {
+				border-color: rgb(84, 238, 84);
+				width: 100%;
+			}
+		}
+		#paveDroite {
+			@extend #paveGauche;
+			button {
+				height: 110px;
+			}
+		}
+		#paveNum {
+			width: 60%;
+			button {
+				border-color: rgb(107, 107, 255);
+				font-size: larger;
+				width: calc(100% / 3);
+			}
+		}
+	}
+	#instructions {
+		background-color: #291717;
+		border-top: solid 2px purple;
+		font-size: larger;
+		padding: 15px;
+	}
+}
+
+#memoire {
+	display: none;
+}

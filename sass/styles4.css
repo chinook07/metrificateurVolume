@@ -1,0 +1,144 @@
+body {
+  background-color: #3d0929;
+  color: #efefef;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin: 0 5px;
+  text-align: center;
+}
+
+#calc {
+  border: 3px solid #9583a7;
+  border-radius: 5px;
+  margin: 15px auto;
+  width: MIN(90%, 400px);
+}
+
+#calc #ecran {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 45px;
+  padding: 10px;
+}
+
+#calc #ecran #uniteChoisie,
+#calc #ecran #memoire2 {
+  font-size: 15px;
+  padding: 5px;
+}
+
+#calc #ecran #resultat {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  font-size: 30px;
+  padding: 5px;
+  text-align: right;
+}
+
+#calc #legende {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#calc #legende button {
+  background-color: #291717;
+  color: #efefef;
+  cursor: pointer;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 20%;
+}
+
+#calc #legende button:nth-child(2) {
+  width: 60%;
+}
+
+#calc #legende button:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+#calc #pave {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#calc #pave > div {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#calc #pave > div button {
+  background-color: #5f1c1c;
+  border-style: solid;
+  border-width: 1px;
+  color: #efefef;
+  cursor: pointer;
+  height: 55px;
+  padding: 0;
+}
+
+#calc #pave > div button:hover {
+  background-color: #853131;
+}
+
+#calc #pave > div button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+#calc #pave > div button:disabled:hover {
+  background-color: #5f1c1c;
+}
+
+#calc #pave #paveGauche, #calc #pave #paveDroite {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 20%;
+}
+
+#calc #pave #paveGauche button, #calc #pave #paveDroite button {
+  border-color: #54ee54;
+  width: 100%;
+}
+
+#calc #pave #paveDroite button {
+  height: 110px;
+}
+
+#calc #pave #paveNum {
+  width: 60%;
+}
+
+#calc #pave #paveNum button {
+  border-color: #6b6bff;
+  font-size: larger;
+  width: calc(100% / 3);
+}
+
+#calc #instructions {
+  background-color: #291717;
+  border-top: solid 2px purple;
+  font-size: larger;
+  padding: 15px;
+}
+
+#memoire {
+  display: none;
+}
+/*# sourceMappingURL=styles4.css.map */
